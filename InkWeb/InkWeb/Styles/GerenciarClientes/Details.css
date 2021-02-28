@@ -1,0 +1,50 @@
+﻿main p, main dd, main dt{
+    color: black;
+}
+
+main{
+    width: 30em;
+    margin: 10em auto;
+    text-align: center;
+}
+
+    main .head {
+        background-color: #45A9FF;
+        border-radius: 1em 1em 0 0;
+        padding: 1em
+    }
+
+    main .body{
+        padding: 1em;
+        background-color: white;
+    }
+
+    main .body section dl div dd {
+        display:block;
+        width: 20em;
+        margin: 0 auto;
+    }
+
+        main .body section dl div {
+            margin-top: 1em;
+        }
+
+        main .body section dl div dd {
+            border: solid 1px black;
+            border-radius: 1em;
+            padding: 0.2em 1em;
+        }
+
+    main .foot {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: 0 0 1em 1em;
+        padding: 1em;
+    }
+
+        main .foot a {
+            background-color: #45A9FF;
+            border-radius: 1em;
+            padding: 0.3em 3em;
+        }

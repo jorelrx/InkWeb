@@ -1,0 +1,85 @@
+﻿@model IEnumerable<InkWeb.Models.Cliente>
+
+@{
+    ViewBag.Title = "Lista de clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <nav>
+        <ul>
+            <li><a href="#">LISTAR</a></li>
+            <li><a href="#">EXCLUÍDOS</a></li>
+        </ul>
+    </nav>
+
+    <h2>Clientes</h2>
+
+    <table>
+        <thead>
+            <tr class="tr_Header">
+                <th>
+                    ID
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sobrenome)
+                </th>
+                <th>
+                    Telefone
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="tr_Body">
+                    <td>
+                        <a href="@Url.Action("Details", "GerenciarClientes", new { id = item.ClienteId })">
+                            @Html.DisplayFor(modelItem => item.ClienteId)
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Details", "GerenciarClientes", new { id = item.ClienteId })">
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Details", "GerenciarClientes", new { id = item.ClienteId })">
+                            @Html.DisplayFor(modelItem => item.Sobrenome)
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Details", "GerenciarClientes", new { id = item.ClienteId })">
+                            @Html.DisplayFor(modelItem => item.Numero_Tell)
+                        </a>
+                    </td>
+                    <td class="td_Editar">
+                        @Html.ActionLink("Editar", "Edit", new { id = item.ClienteId }, new { @class = "ancora_branco" })
+                    </td>
+                    <td class="td_Excluir">
+                        @Html.ActionLink("Excluir", "Delete", new { id = item.ClienteId }, new { @class = "ancora_branco" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>Sobrenome</td>
+                <td>Telefone</td>
+                <td colspan="2" class="td_Criar">
+                    @Html.ActionLink("Adicionar novo cliente", "Create")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</main>
+
+@section style{ <link href="~/Styles/GerenciarClientes/Index.css" rel="stylesheet" type="text/css" /> }
+

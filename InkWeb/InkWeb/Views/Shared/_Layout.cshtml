@@ -4,21 +4,24 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/Styles/_Layout.css">
-    <link rel="stylesheet" href="~/Styles/Index.css">
+    <link rel="stylesheet" href="~/Styles/Shared/_Layout.css">
+    <link rel="sortcut icon" href="~/Images/InkWebLogo.png" type="image/x-icon" />
+    @RenderSection("style", false)
 </head>
 <body>
     <header id="header">
         <a href="@Url.Action(actionName:"Index", controllerName:"Page")">
-            <img src="~/Images/LogoInkWeb.png" alt="Logo">
+            <img src="~/Images/InkWebLogo.png" alt="Logo">
             <h1><span class="InkAzul">Ink</span>Web</h1>
         </a>
+
         <nav>
             <ul>
                 <li><a href="#header">HOME</a></li>
                 <li><a href="#section_Portifolio">PORTIFÓLIO</a></li>
                 <li><a href="#section_Studio">O STUDIO</a></li>
                 <li><a href="#footer">CONTATO</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         </nav>
     </header>

@@ -1,0 +1,44 @@
+﻿main{
+    width: 40em;
+    margin: 10em auto;
+    text-align: center;
+}
+
+    main form .head {
+        background-color: #45A9FF;
+        border-radius: 1em 1em 0 0;
+        padding: 0.7em;
+    }
+
+    main .body {
+        background-color: white;
+        padding: 1em;
+    }
+
+    main .body label, main .body input{
+        text-align: center;
+        color: black;
+    }
+
+        main .body input {
+            border-radius: 1em;
+            border: solid 1px #C4C4C4;
+            width: 20em;
+            padding: 0.3em 3em;
+        }
+
+    main .foot {
+        background-color: white;
+        border-radius: 0 0 1em 1em;
+        display: flex;
+        justify-content: space-around;
+        padding: 1em 5em;
+    }
+
+    main .foot input, main .foot a{
+        background-color: #45A9FF;
+        border-radius: 1em;
+        padding: 0.3em 3em;
+        border: 0;
+        text-decoration: none;
+    }

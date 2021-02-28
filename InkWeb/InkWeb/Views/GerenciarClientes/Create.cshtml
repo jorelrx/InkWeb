@@ -1,0 +1,96 @@
+﻿@model InkWeb.Models.Cliente
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <section class="form_head">
+            <h2>Adicionar novo Cliente</h2>
+        </section>
+        <section class="form_body">
+
+            <p>Dados do usuário</p>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div>
+                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @placeholder = "Login" } })
+                @Html.ValidationMessageFor(model => model.Login, "")
+            </div>
+
+            <div>
+                @Html.PasswordFor(model => model.Senha, htmlAttributes: new { @placeholder = "Senha" } )
+                @Html.ValidationMessageFor(model => model.Senha, "")
+            </div>
+
+            <div>
+                <input id="ConfirmarSenha" placeholder="Confirmar senha" />
+            </div>
+
+            <p>Dados pessoais</p>
+
+            <div>
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @placeholder = "Nome" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.EditorFor(model => model.Sobrenome, new { htmlAttributes = new { @placeholder = "Sobrenome" } })
+                @Html.ValidationMessageFor(model => model.Sobrenome, "", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "E-mail" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.EditorFor(model => model.Numero_Tell, new { htmlAttributes = new { @placeholder = "Whatsapp/Telefone" } })
+                @Html.ValidationMessageFor(model => model.Numero_Tell, "", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.EditorFor(model => model.Instagram, new { htmlAttributes = new { @placeholder = "Instagram (Opcional)" } })
+                @Html.ValidationMessageFor(model => model.Instagram, "", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.EditorFor(model => model.Data_Nascimento, new { htmlAttributes = new { @placeholder = "Data de nascimento" } })
+                @Html.ValidationMessageFor(model => model.Data_Nascimento, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="genero">
+                <p>Gênero</p>
+                <div>
+                    <div>
+                        @Html.RadioButtonFor(model => model.Sexo, "masc", htmlAttributes: new { id = "masc" })
+                        @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+                        <label for="masc">Masculino</label>
+                    </div>
+                    <div>
+                        @Html.RadioButtonFor(model => model.Sexo, "fem", htmlAttributes: new { id = "fem" })
+                        @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+                        <label for="fem">Feminino</label>
+                    </div>
+                    <div>
+                        @Html.RadioButtonFor(model => model.Sexo, "other", htmlAttributes: new { id = "other" })
+                        @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+                        <label for="other">Outro</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form_foot">
+            @Html.ActionLink("Retornar", "Index")
+            <input type="submit" value="Adicionar conta" class="button" />
+        </section>
+    }
+
+</main>
+
+@section style{ <link href="~/Styles/GerenciarClientes/Create.css" rel="stylesheet" type="text/css" /> }

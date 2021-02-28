@@ -1,0 +1,88 @@
+﻿@model InkWeb.Models.Cliente
+
+@{
+    ViewBag.Title = "Excluir cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <section class="head">
+        <h2>Tem certeza que deseja excluir?</h2>
+    </section>
+    <section class="body">
+        <p>Dados pessoais</p>
+        <section>
+            <dl>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Nome)
+                    </dd>
+                </div>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Sobrenome)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Sobrenome)
+                    </dd>
+                </div>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                </div>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                </div>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Instagram)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Instagram)
+                    </dd>
+                </div>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Data_Nascimento)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Data_Nascimento)
+                    </dd>
+                </div>
+                <div>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Sexo)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Sexo)
+                    </dd>
+                </div>
+            </dl>
+        </section>
+    </section>
+    <section class="foot">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                @Html.ActionLink("Voltar", "Index")
+                <input type="submit" value="Excluir" />
+            </div>
+        }
+    </section>
+
+</main>
+@section style{
+    <link href="~/Styles/GerenciarClientes/Delete.css" rel="stylesheet" type="text/css" /> }

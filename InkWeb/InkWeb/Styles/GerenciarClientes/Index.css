@@ -1,0 +1,104 @@
+﻿main {
+width: 60em;
+margin: 0 auto 20em auto;
+text-align: center;
+}
+
+main nav ul{
+display: flex;
+justify-content: center;
+}
+
+main nav ul li{
+display: inline;
+padding: 1em;
+}
+
+main h2{
+font-size: 2em;
+padding: 1em;
+}
+
+main table{
+width: 100%;
+}
+
+main table thead{
+background-color: #45A9FF;
+border-radius: 1em 1em 0 0;
+display: block;
+}
+
+main table tr{
+display: flex;
+}
+
+main table tr th {
+border: 0;
+display: inline;
+width: 10em;
+padding: 1em;
+}
+
+main table tbody {
+display: block;
+}
+
+main table tbody tr:hover {
+background-color: #c3c3c3;
+}
+
+main table .tr_Body {
+background-color: #DADADA;
+}
+
+main table tr td {
+border: 0;
+}
+
+main table .tr_Body td a {
+text-decoration: none;
+color: black;
+padding: 1em;
+display: inline-block;
+width: 10em;
+}
+
+main table .tr_Body .td_Editar {
+background-color: #E29E37;
+}
+
+main table .tr_Body .td_Excluir {
+background-color: #E23737;
+}
+
+main table .tr_Body td .ancora_branco{
+color: white;
+}
+
+main table tfoot {
+background-color: #DADADA;
+border-radius: 0 0 1em 1em;
+display: block;
+}
+
+main table tfoot td {
+color: #989898;
+padding: 1em;
+display: inline-block;
+width: 10em;
+}
+
+main table tfoot .td_Criar {
+background-color: #59AF6C;
+width: 20em;
+border-radius: 0 0 1em 0;
+padding: 0;
+}
+
+main table tfoot .td_Criar a {
+text-decoration: none;
+width: 20em;
+display: inline-block;
+padding: 1em
+}
