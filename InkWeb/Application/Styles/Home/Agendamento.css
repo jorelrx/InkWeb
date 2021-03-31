@@ -1,0 +1,89 @@
+﻿main{
+    margin: 0 auto;
+}
+
+    main form > section {
+        text-align: center;
+        width: 80em;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 2em;
+    }
+
+input[type="radio"]:checked + label {
+    border-color: #ccf;
+}
+
+section h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+section section {
+    display: flex;
+    justify-content: space-around;
+}
+
+    section section > div {
+        border: 0.5em solid transparent;
+        border-radius: 3em;
+    }
+
+        section section > div:hover {
+            border: 0.5em solid #45A9FF;
+            background-color: #45A9FF;
+        }
+
+.section_TamanhoTattoo section {
+    margin-top: 10em;
+}
+
+section section div h3 {
+    font-size: 2.2em;
+}
+
+section section div div {
+    width: 15em;
+    margin: 0 auto;
+}
+
+    section section div div p {
+        font-size: 1.3em;
+    }
+
+.section_LocalTattoo section {
+    margin-top: 3em;
+}
+
+    .section_LocalTattoo section img {
+        height: 15em;
+    }
+
+.section_FormaPagamento section {
+    margin-top: 15em;
+}
+
+    .section_FormaPagamento section div {
+        padding: 1em;
+    }
+
+input, span, .section_Descricao textarea{
+    color: black;
+}
+
+
+.section_Descricao section{
+    display: block;
+    width: 50em;
+    margin: 0 auto;
+    background-color: white;
+}
+    .section_Descricao section h3 {
+        background-color: #141414;
+        padding: 1em;
+    }
+
+    .section_Descricao section textarea {
+        width: 45em;
+        height: 30em;
+    }

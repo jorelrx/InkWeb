@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Services.dll
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Services.pdb
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Models.dll
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Persistence.dll
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Models.pdb
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Persistence.pdb
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\Persistence.dll.config
+C:\Users\Usuario\source\repos\InkWeb\Services\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\source\repos\InkWeb\Services\obj\Debug\Services.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\InkWeb\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\InkWeb\Services\obj\Debug\Services.csproj.CopyComplete
+C:\Users\Usuario\source\repos\InkWeb\Services\obj\Debug\Services.dll
+C:\Users\Usuario\source\repos\InkWeb\Services\obj\Debug\Services.pdb

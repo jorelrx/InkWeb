@@ -1,0 +1,6 @@
+C:\Users\Usuario\source\repos\InkWeb\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\InkWeb\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\InkWeb\Models\bin\Debug\Models.dll
+C:\Users\Usuario\source\repos\InkWeb\Models\bin\Debug\Models.pdb
+C:\Users\Usuario\source\repos\InkWeb\Models\obj\Debug\Models.dll
+C:\Users\Usuario\source\repos\InkWeb\Models\obj\Debug\Models.pdb

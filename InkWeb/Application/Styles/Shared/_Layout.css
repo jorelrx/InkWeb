@@ -1,0 +1,105 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    color: white;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 20px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap');
+
+body {
+    background-color: #202223;
+}
+
+.InkAzul {
+    color: #45A9FF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+}
+
+    header h1 {
+        padding-top: 0.1em;
+    }
+
+        header h1 img {
+            vertical-align: middle;
+        }
+
+        header h1 a {
+            margin-top: 7px;
+            text-decoration: none;
+        }
+
+    header div{
+        margin-top: 0.5em;
+    }
+
+        header div img {
+            vertical-align: middle;
+        }
+
+        header div img:hover {
+            cursor: pointer;
+        }
+
+        header div div {
+            display: inline;
+            margin-right: 2em;
+        }
+
+            header div div a {
+                text-decoration: none;
+                background-color: #141414;
+                padding: 0.3em 1em;
+            }
+
+        header div nav {
+            background-color: #202223;
+            position: absolute;
+            right: 0px;
+            top: 60px;
+            display: none;
+        }
+
+            header nav ul {
+                text-align: center;
+                list-style-type: none;
+            }
+
+            header nav li {
+                padding: 1em;
+            }
+
+                header nav li:hover {
+                    background-color: #4A4C4D
+                }
+
+            header nav ul li a {
+                text-decoration: none;
+            }
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 10em;
+}
+
+    footer > div {
+        width: 32vw;
+    }
+
+    footer .divFlor {
+        text-align: center;
+    }
+
+    footer div div {
+        display: flex;
+    }

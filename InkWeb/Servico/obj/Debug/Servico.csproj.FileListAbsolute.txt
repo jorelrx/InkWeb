@@ -1,6 +1,0 @@
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Servico\bin\Debug\Servico.dll
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Servico\bin\Debug\Servico.pdb
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Servico\obj\Debug\Servico.csprojAssemblyReference.cache
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Servico\obj\Debug\Servico.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Servico\obj\Debug\Servico.dll
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Servico\obj\Debug\Servico.pdb

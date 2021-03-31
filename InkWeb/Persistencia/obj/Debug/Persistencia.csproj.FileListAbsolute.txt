@@ -1,6 +1,0 @@
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Persistencia\bin\Debug\Persistencia.dll
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Persistencia\bin\Debug\Persistencia.pdb
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Persistencia\obj\Debug\Persistencia.dll
-C:\Users\Usuario\Documents\GitHub\InkWeb\InkWeb\Persistencia\obj\Debug\Persistencia.pdb

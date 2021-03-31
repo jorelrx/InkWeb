@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Models.Pessoa.MUsuario>
+@{
+    ViewBag.Title = "GerenciarClientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <h3>Gerenciar clientes</h3>
+    <section class="section_Home">
+        @foreach (var item in Model)
+        {
+            <section onclick="@Url.Action("Details","Admin")">
+                <img src="~/Images/FotoPerfil.png" alt="foto do perfil">
+                <p class="pNome">@Html.DisplayFor(nome => item.Nome)</p>
+                <p>@Html.DisplayFor(email => item.Email)</p>
+                <p>@Html.DisplayFor(telefone => item.Numero_Tell)</p>
+                <div>
+                    <a href="@Url.Action("Edit", "Admin", new { id = item.Id })">
+                        <img src="~/Images/ImagemEditar.png" alt="Imagem editar">
+                    </a>
+                    <a href="@Url.Action("Delete", "Admin", new { id = item.Id })">
+                        <img src="~/Images/ImagemDeletar.png" alt="Imagem deletar">
+                    </a>
+                </div>
+            </section>
+        }
+        <section>
+            <a href="@Url.Action("NewAccount", "Account")">
+                <img src="~/Images/FotoPerfil.png" alt="foto do perfil">
+            </a>
+        </section>
+    </section>
+</main>
+@section style{ <link href="~/Styles/Admin/GerenciarClientes.css" rel="stylesheet" type="text/css" /> }
