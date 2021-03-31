@@ -37,5 +37,12 @@ namespace Persistence.DAL.Servico
             }
             context.SaveChanges();
         }
+        public MServico DeleteService(long id)
+        {
+            MServico mServico = ListService(id);
+            context.Servicos.Remove(mServico);
+            context.SaveChanges();
+            return mServico;
+        }
     }
 }

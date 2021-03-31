@@ -62,9 +62,25 @@ namespace Application.Controllers
             return View(sServico.ListService(id));
         }
 
+        public ActionResult Delete(long? id)
+        {
+            return GetViewServiceToID(id);
+        }
+        // POST: Servico/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(long id)
         {
-            return View(sServico.ListService(id));
+            try
+            {
+                MServico mServico = sServico.DeleteSerice(id);
+                TempData["Message"] = "Serviço " + mServico.ID + " foi removido";
+                return RedirectToAction("PedidosPendentes");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }

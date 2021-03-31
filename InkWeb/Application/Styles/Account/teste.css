@@ -1,0 +1,98 @@
+﻿main {
+    width: 30em;
+    margin: 5em auto 10em auto;
+    text-align: center;
+}
+
+    .divAncora a, main span, .form_body label {
+        color: black;
+    }
+
+    main form input, main form label, main li {
+        width: 25em;
+        border-radius: 1em;
+        padding: 0.2em 1em;
+        text-align: center;
+        border: solid 2px #C4C4C4;
+    }
+
+    main .form_body .divAncora {
+        text-align: left;
+        margin-left: 3.5em
+    }
+
+    main form .form_head {
+        background-color: #141414;
+        border-radius: 3em 3em 0 0;
+        padding: 1em;
+    }
+
+    main form .form_body {
+        background-color: white;
+        padding: 1em;
+    }
+
+    main form .form_foot {
+        background-color: white;
+        border-radius: 0 0 2em 2em;
+        padding: 1em 2em;
+        text-align: right;
+    }
+
+        main form .form_foot input {
+            width: 10em;
+            background-color: #141414;
+            border: 0;
+            padding: 0.4em 0;
+            border-radius: 1em;
+            text-decoration: none;
+        }
+main {
+    width: 30em;
+    margin: 5em auto 10em auto;
+    text-align: center;
+}
+
+    .divAncora a, main span, .form_body label {
+        color: black;
+    }
+
+    main form input, main form label, main li {
+        width: 25em;
+        border-radius: 1em;
+        padding: 0.2em 1em;
+        text-align: center;
+        border: solid 2px #C4C4C4;
+    }
+
+    main .form_body .divAncora {
+        text-align: left;
+        margin-left: 3.5em
+    }
+
+    main form .form_head {
+        background-color: #141414;
+        border-radius: 3em 3em 0 0;
+        padding: 1em;
+    }
+
+    main form .form_body {
+        background-color: white;
+        padding: 1em;
+    }
+
+    main form .form_foot {
+        background-color: white;
+        border-radius: 0 0 2em 2em;
+        padding: 1em 2em;
+        text-align: right;
+    }
+
+        main form .form_foot input {
+            width: 10em;
+            background-color: #141414;
+            border: 0;
+            padding: 0.4em 0;
+            border-radius: 1em;
+            text-decoration: none;
+        }

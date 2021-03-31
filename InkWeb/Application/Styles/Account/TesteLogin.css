@@ -3,11 +3,8 @@
     margin: 5em auto 10em auto;
     text-align: center;
 }
-    .divAncora a, main span, .form_body label {
-        color: black;
-    }
 
-    main form input, main form label, main li{
+    main form input, main form label, main span, main li, .divAncora a {
         width: 25em;
         border-radius: 1em;
         padding: 0.2em 1em;

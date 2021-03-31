@@ -24,5 +24,9 @@ namespace Services.Servico
         {
             serviceDAL.SaveService(mServico);
         }
+        public MServico DeleteSerice(long id)
+        {
+            return serviceDAL.DeleteService(id);
+        }
     }
 }

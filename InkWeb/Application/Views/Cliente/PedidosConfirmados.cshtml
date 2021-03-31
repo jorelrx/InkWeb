@@ -15,14 +15,11 @@
     <section class="section_Home">
         @foreach (var item in Model)
         {
-            <section>
+            <section onclick="Redirect(@item.ID)" class="card">
                 <img src="~/Images/FotoPerfil.png" alt="foto do perfil">
                 <!--<p class="pNome">Html.DisplayFor(nome => item.Nome)</p>-->
                 <p>@Html.DisplayFor(email => item.Data_servico)</p>
                 <div>
-                    <a href="@Url.Action("Details", "Cliente", new { id = item.ID })">
-                        detalhes
-                    </a>
                 </div>
             </section>
         }
@@ -33,5 +30,11 @@
         </section>
     </section>
 </main>
+<script>
+    function Redirect(id)
+    {
+        window.location.href = '@Url.Action("Details", "Cliente")/' + id;
+    }
+</script>
 @section style{
     <link href="~/Styles/Cliente/Pedidos.css" rel="stylesheet" type="text/css" /> }
