@@ -20,11 +20,8 @@
                 <!--<p class="pNome">Html.DisplayFor(nome => item.Nome)</p>-->
                 <p>@Html.DisplayFor(email => item.Data_servico)</p>
                 <div>
-                    <a href="@Url.Action("Edit", "Cliente", new { id = item.ID })">
+                    <a href="@Url.Action("Agendamento", "Home", new { id = item.ID })">
                         <img src="~/Images/ImagemEditar.png" alt="Imagem editar">
-                    </a>
-                    <a href="@Url.Action("Details", "Cliente", new { id = item.ID })">
-                        detalhes
                     </a>
                     <a href="@Url.Action("Delete", "Cliente", new { id = item.ID })">
                         <img src="~/Images/ImagemDeletar.png" alt="Imagem deletar">
@@ -39,8 +36,6 @@
         </section>
     </section>
 </main>
-<script src="~/Scripts/jquery-3.4.1.js">
-</script>
 <script>
     function Redirect(id)
     {
