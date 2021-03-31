@@ -1,0 +1,35 @@
+﻿main {
+    width: 30em;
+    margin: 0 auto;
+    background-color: white;
+}
+
+    main h3 {
+        background-color: #141414;
+        padding: 1em;
+    }
+
+    main h4, main p {
+        color: black;
+    }
+
+    main section {
+        text-align: center;
+    }
+
+        main section h4 {
+            font-weight: 600;
+            font-size: 1.3em;
+            line-height: 2em;
+        }
+
+        main section div {
+            display: flex;
+            justify-content: center;
+            padding: 0.3em;
+        }
+
+            main section div p {
+                margin-right: 0.5em;
+                font-family: system-ui;
+            }

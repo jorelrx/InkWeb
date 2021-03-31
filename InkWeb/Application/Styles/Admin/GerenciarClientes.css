@@ -1,0 +1,40 @@
+﻿main {
+    width: 60vw;
+    margin: 3em auto 10em auto;
+    text-align: center;
+}
+    
+    main h3{
+        font-size: 3em
+    }
+
+    main .section_Home {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 4em;
+    }
+
+    main .section_Home section {
+        background-color: white;
+        width: 13em;
+        text-align: center;
+        padding-top: 1em;
+        margin: 1em;
+    }
+
+    main .section_Home section p{
+        color: black;
+        margin-bottom: 1em;
+    }
+
+    main .section_Home section .pNome{
+        font-size: 1.3em;
+    }
+
+    main .section_Home section div{
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em 1em 0.2em 1em;
+    }
