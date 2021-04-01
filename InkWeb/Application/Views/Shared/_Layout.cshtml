@@ -34,8 +34,11 @@
                     <li><a href="#section_Portifolio">PORTIFÓLIO</a></li>
                     <li><a href="#section_Studio">O STUDIO</a></li>
                     <li><a href="#footer">CONTATO</a></li>
-                    <li><a href="@Url.Action("PedidosPendentes","Cliente")">Gerenciar Pedidos</a></li>
-                    <li><a href="@Url.Action("GerenciarClientes","Admin")">Gerenciar Clientes</a></li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li><a href="@Url.Action("PedidosPendentes","Cliente")">Gerenciar Pedidos</a></li>
+                        <li><a href="@Url.Action("GerenciarClientes","Admin")">Gerenciar Clientes</a></li>
+                    }
                 </ul>
             </nav>
         </div>

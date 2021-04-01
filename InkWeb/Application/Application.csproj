@@ -133,8 +133,6 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\_Layout.js" />
-    <Content Include="Styles\Account\teste.css" />
-    <Content Include="Styles\Account\TesteLogin.css" />
     <Content Include="Styles\Admin\GerenciarClientes.css" />
     <Content Include="Styles\Cliente\Details.css" />
     <Content Include="Styles\Cliente\Pedidos.css" />
