@@ -5,7 +5,7 @@
 }
 
     main form .form_head {
-        background-color: #45A9FF;
+        background-color: #141414;
         border-radius: 3em 3em 0 0;
         padding: 1em;
     }
@@ -29,10 +29,11 @@
     main form div {
         margin-bottom: 1em;
         margin: 0 auto;
+        width: 20em;
     }
 
     main form input {
-        width: 25em;
+        width: 100%;
         border-radius: 1em;
         padding: 0.2em 1em;
         text-align: center;
@@ -66,18 +67,9 @@
         justify-content: space-between;
     }
 
-        main form .form_foot a {
-            width: 10em;
-            background-color: #45A9FF;
-            border: 0;
-            padding: 0.4em 0;
-            border-radius: 1em;
-            text-decoration: none;
-        }
-
         main form .form_foot .button {
             width: 10em;
-            background-color: #45A9FF;
+            background-color: #141414;
             color: white;
             border: 0;
             padding: 0.4em 0;

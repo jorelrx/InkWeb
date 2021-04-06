@@ -39,7 +39,11 @@ namespace Application.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel loginViewModel, string returnURL)
         {
-            if (!ModelState.IsValid) 
+            if (ModelState.IsValid)
+            {
+
+            }
+            else
             { 
                 return View(loginViewModel); 
             }

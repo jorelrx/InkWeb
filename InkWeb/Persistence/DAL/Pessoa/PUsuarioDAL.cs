@@ -22,7 +22,7 @@ namespace Persistence.DAL
         //Adicionar usuarios e editar dados
         public void SaveUsuario(MUsuario mUsuario)
         {
-            if (mUsuario.Id == 0)
+            if (mUsuario.Id == "0")
             {
                 context.Usuarios.Add(mUsuario);
             }

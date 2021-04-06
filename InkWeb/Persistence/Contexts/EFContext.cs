@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models.Pessoa;
 using Models;
+using Persistence.Migrations;
 
 namespace Persistence.Contexts
 {
@@ -13,7 +14,7 @@ namespace Persistence.Contexts
     {
         public EFContext() : base("Ink_Web")
         {
-            Database.SetInitializer<EFContext>(new DropCreateDatabaseIfModelChanges<EFContext>());
+            Database.SetInitializer<EFContext>(new MigrateDatabaseToLatestVersion<EFContext, Configuration>());
         }
         public DbSet<MAdministrador> Administradores { get; set; }
         public DbSet<MCliente> Clientes { get; set; }

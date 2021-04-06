@@ -26,13 +26,14 @@ namespace Models
         public string[] Formas_Pagamento = new[] { "Dinheiro", "Cartao", "Transferencia" };
         [DisplayName("Data para agendar")]
         [Required(ErrorMessage = "Selecione o dia para agendamento")]
+        [DataType(DataType.Date)]
         public DateTime Data_servico { get; set; }
         public string Descricao { get; set; }
         public string Image_Perfil { get; set; }
         public bool Confirmar_Servico { get; set; } = false;
 
-        public List<long> IdUsuario { get; set; }
-        public List<MUsuario> mUsuarios { get; set; }
+        public long? IDUsuario { get; set; }
+        public MUsuario Usuario { get; set; }
 
     }
 }

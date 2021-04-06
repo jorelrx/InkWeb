@@ -12,6 +12,18 @@ namespace Application.Controllers
     public class ClienteController : Controller
     {
         private SServico sServico = new SServico();
+        // Metodo Privado
+        private void PopularViewBag(MServico produto = null)
+        {
+            if (produto == null)
+            {
+                ViewBag.IDUsuario = new SelectList(sServico.ListServices(), "IDUsuario", "Nome");
+            }
+            else
+            {
+                ViewBag.IDUsuario = new SelectList(sServico.ListServices(), "IDUsuario", "Nome", produto.IDUsuario);
+            }
+        }
         private ActionResult SaveServico(MServico mServico)
         {
             try
@@ -21,6 +33,7 @@ namespace Application.Controllers
                     sServico.SaveService(mServico);
                     return RedirectToAction("Index", "Home");
                 }
+                PopularViewBag(mServico);
                 return View(mServico);
             }
             catch
@@ -34,11 +47,14 @@ namespace Application.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             MServico mServico = sServico.ListService((long)id);
+
             if (mServico == null)
             {
                 return HttpNotFound();
             }
+
             return View(mServico);
         }
 

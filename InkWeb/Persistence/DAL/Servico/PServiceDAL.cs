@@ -21,7 +21,7 @@ namespace Persistence.DAL.Servico
 
         public MServico ListService(long id)
         {
-            return context.Servicos.Where(s => s.ID == id).First();
+            return context.Servicos.Where(s => s.ID == id).Include(c => c.Usuario).First();
         }
 
         //Adicionar usuarios e editar dados
