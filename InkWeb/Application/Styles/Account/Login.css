@@ -4,17 +4,16 @@
     text-align: center;
 }
 
-    .divAncora a, main span, .form_body label, main form input , main li{
+    .divAncora a, main span, .form_body label, main form input {
         color: black;
     }
 
-    main form input {
-        width: 100%;
+    main form input, main li {
+        width: 25em;
         border-radius: 1em;
         padding: 0.2em 1em;
         text-align: center;
         border: solid 2px #C4C4C4;
-        display: block;
     }
 
     main .form_body .divAncora {
@@ -32,10 +31,6 @@
         background-color: white;
         padding: 1em;
     }
-
-        main form .form_body div div {
-            width: 25em;
-        }
 
     main form .form_foot {
         background-color: white;

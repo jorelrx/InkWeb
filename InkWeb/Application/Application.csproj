@@ -50,37 +50,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -156,6 +126,14 @@
     <Content Include="Images\TattooPequena.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Tattoo\Views\web.config" />
+    <Content Include="Areas\Gerenciamento\Views\web.config" />
+    <Content Include="Areas\Home\Views\web.config" />
+    <Content Include="Areas\Gerenciamento\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Gerenciamento\Views\Role\Create.cshtml" />
+    <Content Include="Areas\Tattoo\Views\Service\Create.cshtml" />
+    <Content Include="Areas\Gerenciamento\Views\Role\Index.cshtml" />
+    <Content Include="Areas\Gerenciamento\Views\Account\NovaConta.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -173,21 +151,21 @@
     <Content Include="Styles\Account\Login.css" />
     <Content Include="Styles\Shared\_Layout.css" />
     <Content Include="Web.config" />
-    <Content Include="Views\Home\Agendamento.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\NewAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Areas\Gerenciamento\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Gerenciamento\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Gerenciamento\Controllers\RoleController.cs" />
+    <Compile Include="Areas\Gerenciamento\GerenciamentoAreaRegistration.cs" />
+    <Compile Include="Areas\Home\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Home\HomeAreaRegistration.cs" />
+    <Compile Include="Areas\Tattoo\Controllers\ServiceController.cs" />
+    <Compile Include="Areas\Tattoo\TattooAreaRegistration.cs" />
+    <Compile Include="Areas\Gerenciamento\Controllers\ClienteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -203,14 +181,14 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\Home\Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-    <Content Include="Views\Admin\GerenciarClientes.cshtml" />
-    <Content Include="Views\Cliente\PedidosPendentes.cshtml" />
-    <Content Include="Views\Cliente\PedidosConfirmados.cshtml" />
-    <Content Include="Views\Cliente\Details.cshtml" />
-    <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Areas\Gerenciamento\Views\Admin\GerenciarClientes.cshtml" />
+    <Content Include="Areas\Tattoo\Views\Service\PedidosPendentes.cshtml" />
+    <Content Include="Areas\Tattoo\Views\Service\PedidosConfirmados.cshtml" />
+    <Content Include="Areas\Tattoo\Views\Service\Details.cshtml" />
+    <Content Include="Areas\Tattoo\Views\Service\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -220,15 +198,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Gerenciamento\Data\" />
+    <Folder Include="Areas\Gerenciamento\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{aed87797-a3f9-4f8c-b509-bccb530717be}</Project>
       <Name>Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Persistence\Persistence.csproj">
-      <Project>{0a6aaabe-c66c-4ac4-8dfa-921aacf97167}</Project>
-      <Name>Persistence</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{b722e83a-8277-44bc-88e3-c88175ad4b39}</Project>

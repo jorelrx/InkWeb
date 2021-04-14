@@ -1,0 +1,48 @@
+﻿@model Models.Tattoo.MServico
+
+@{ ViewBag.Title = "Detalhes do pedido";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<main>
+    <h3>Detalhes do pedido</h3>
+    <section class="info_Pedido">
+        <h4>Informações do pedido</h4>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Tamanho_Tattoo): </p>
+            <p> @Html.DisplayFor(model => model.Tamanho_Tattoo)</p>
+        </div>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Local_Corpo):</p>
+            <p>@Html.DisplayFor(model => model.Local_Corpo)</p>
+        </div>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Data_servico):</p>
+            <p>@Html.DisplayFor(model => model.Data_servico)</p>
+        </div>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Forma_Pagamento):</p>
+            <p>@Html.DisplayFor(model => model.Forma_Pagamento)</p>
+        </div>
+    </section>
+    <section class="descricao">
+        <div>
+            <h4>@Html.DisplayNameFor(model => model.Descricao)</h4>
+            <div>
+                <p>@Html.DisplayFor(model => model.Descricao)</p>
+            </div>
+        </div>
+
+
+        <p>@Html.DisplayNameFor(model => model.Image_Perfil)</p>
+
+        <p>@Html.DisplayFor(model => model.Image_Perfil)</p>
+
+
+    </section>
+    <section class="buttons">
+        <a href="@Url.Action("Agendamento", "Home", new { id = Model.ID })">Editar</a>
+        @Html.ActionLink("Confirmar", "PedidosPendentes")
+    </section>
+</main>
+@section style{
+    <link href="~/Styles/Cliente/Teste.css" rel="stylesheet" type="text/css" /> }

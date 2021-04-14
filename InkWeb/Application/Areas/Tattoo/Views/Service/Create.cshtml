@@ -1,0 +1,161 @@
+﻿@model Models.Tattoo.MServico
+@{
+    ViewBag.Title = "Agendamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "")
+        <section class="section_TamanhoTattoo center">
+            <h2>Como será a sua tattoo?</h2>
+            <section>
+                @{ 
+                    string[] Tamanhos_Tattoo = new[] { "Pequena", "Media", "Grande", "Extra_Grande" };
+                }
+                @foreach (var Tamanho_Tattoo in Tamanhos_Tattoo)
+                {
+                    <div>
+                        <input type="radio" name="Tamanho_Tattoo" asp-for="Tamanho_Tattoo" value="@Tamanho_Tattoo" id="Tattoo@(Tamanho_Tattoo)" />
+                        <label for="Tattoo@(Tamanho_Tattoo)"><img src="~/Images/Tattoo@(Tamanho_Tattoo).png" alt=""></label>
+                        @if (Tamanho_Tattoo == "Pequena")
+                        {
+                            <div>
+                                <h3>Pequena</h3>
+                                <p>Tatuagens comerciais, até 5cm</p>
+                            </div>
+                        }
+                        else if (Tamanho_Tattoo == "Media")
+                        {
+                            <div>
+                                <h3>Média</h3>
+                                <p>Tatuagens de 5-19cm</p>
+                            </div>
+                        }
+                        else if (Tamanho_Tattoo == "Grande")
+                        {
+                            <div>
+                                <h3>Grande</h3>
+                                <p>Tatuagens de 20-30cm</p>
+                            </div>
+                        }
+                        else if (Tamanho_Tattoo == "Extra_Grande")
+                        {
+                            <div>
+                                <h3>Extra grande</h3>
+                                <p>Tatuagens de fechamento de um membro inteiro</p>
+                            </div>
+                        }
+                    </div>
+                }
+            </section>
+        </section>
+        <section class="section_LocalTattoo">
+            <h2>Qual local do corpo?</h2>
+            <p>*Descrição do local clicado*</p>
+            <section>
+                @{ 
+                    string[] Locais_Corpo = new[] { "primeiro", "segundo", "terceiro", "quarto" };
+                }
+                @foreach (var item in Locais_Corpo)
+                {
+                    <div>
+                        <input type="radio" name="Local_Corpo" asp-for="Local_Corpo" value="@item" id="Tattoo@(item)" />
+                        <label for="Tattoo@(item)"><img src="~/Images/LocalTattoo.png" alt=""></label>
+                        @if (item == "primeiro")
+                        {
+                            <div>
+                                <h3>Pequena</h3>
+                                <p>Tatuagens comerciais, até 5cm</p>
+                            </div>
+                        }
+                        else if (item == "segundo")
+                        {
+                            <div>
+                                <h3>Média</h3>
+                                <p>Tatuagens de 5-19cm</p>
+                            </div>
+                        }
+                        else if (item == "terceiro")
+                        {
+                            <div>
+                                <h3>Grande</h3>
+                                <p>Tatuagens de 20-30cm</p>
+                            </div>
+                        }
+                        else if (item == "quarto")
+                        {
+                            <div>
+                                <h3>Extra grande</h3>
+                                <p>Tatuagens de fechamento de um membro inteiro</p>
+                            </div>
+                        }
+                    </div>
+                }
+                @Html.ValidationMessageFor(model => model.Local_Corpo, "", new { @class = "text-danger" })
+            </section>
+        </section>
+        <section class="section_FormaPagamento">
+            <h2>Qual forma de pagamento?</h2>
+            <p>Sua tatuagem sairá em torno de R$100,00 - R$200,00. O preço só será exato depois da confirmação do tatuador</p>
+            <section>
+                @{ 
+                    string[] Formas_Pagamento = new[] { "Dinheiro", "Cartao", "Transferencia" };
+                }
+                @foreach (var item in Formas_Pagamento)
+                {
+                    <div>
+                        <input type="radio" name="Forma_Pagamento" asp-for="Forma_Pagamento" value="@item" id="Tattoo@(item)" />
+                        <label for="Tattoo@(item)"><img src="~/Images/MetodoPagamento.png" alt=""></label>
+                        @if (item == "Dinheiro")
+                        {
+                            <div>
+                                <h3>Dinheiro em espécie</h3>
+                            </div>
+                        }
+                        else if (item == "Cartao")
+                        {
+                            <div>
+                                <h3>Cartão e crédito/débito</h3>
+                            </div>
+                        }
+                        else if (item == "Transferencia")
+                        {
+                            <div>
+                                <h3>Transferência bancária</h3>
+                            </div>
+                        }
+                    </div>
+                }
+                @Html.ValidationMessageFor(model => model.Forma_Pagamento, "", new { @class = "text-danger" })
+            </section>
+        </section>
+        <section class="section_Data">
+            <h2>Qual dia você estará disponível?</h2>
+            @Html.EditorFor(model => model.Data_servico, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Data_servico, "", new { @class = "text-danger" })
+        </section>
+        <section class="section_Descricao">
+            <h2>Informações adicionais</h2>
+            <section>
+                <h3>Descreva sua tatuagem</h3>
+                @Html.TextAreaFor(model => model.Descricao)
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </section>
+        </section>
+
+        <section>
+            @Html.LabelFor(model => model.Image_Perfil, htmlAttributes: new { @class = "control-label col-md-2" })
+            <section>
+                @Html.EditorFor(model => model.Image_Perfil, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Image_Perfil, "", new { @class = "text-danger" })
+            </section>
+        </section>
+        <section>
+            <input type="submit" value="Agendar" />
+        </section>
+    }
+</main>
+@section style{ <link href="~/Styles/Home/Agendamento.css" rel="stylesheet" type="text/css" /> }

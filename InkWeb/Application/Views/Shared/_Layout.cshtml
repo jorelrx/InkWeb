@@ -11,7 +11,7 @@
 <body>
     <header id="header">
         <h1>
-            <a href="@Url.Action("Index", "Home")">
+            <a href="@Url.Action("Index", "Home", new { Area = "Home" }, null)">
                 <img src="~/Images/InkWebLogo.png" alt="Logo">
                 <span class="InkAzul">Ink</span>Web
             </a>
@@ -20,11 +20,11 @@
             <div>
                 @if (Request.IsAuthenticated)
                 {
-                    @Html.ActionLink(@User.Identity.Name + " - Sair", "Logout", "Account");
+                    @Html.ActionLink(@User.Identity.Name + " - Sair", "Logout", "Account", new { Area = "Gerenciamento" }, null);
                 }
                 else
                 {
-                    @Html.ActionLink("Login/Cadastro", "Login", "Account");
+                    @Html.ActionLink("Login/Cadastro", "Login", "Account", new { Area = "Gerenciamento" }, null);
                 }
             </div>
             <img id="dropDown" src="~/Images/MenuSandwich.png" alt="Logo">
@@ -36,8 +36,8 @@
                     <li><a href="#footer">CONTATO</a></li>
                     @if (Request.IsAuthenticated)
                     {
-                        <li><a href="@Url.Action("PedidosPendentes","Cliente")">Gerenciar Pedidos</a></li>
-                        <li><a href="@Url.Action("GerenciarClientes","Admin")">Gerenciar Clientes</a></li>
+                        <li><a href="@Url.Action("PedidosPendentes","Cliente", new { Area = "Gerenciamento" }, null)">Gerenciar Pedidos</a></li>
+                        <li><a href="@Url.Action("GerenciarClientes","Admin", new { Area = "Gerenciamento" }, null)">Gerenciar Clientes</a></li>
                     }
                 </ul>
             </nav>
@@ -69,9 +69,6 @@
             </div>
         </div>
     </footer>
-    <script>
-
-    </script>
 </body>
 </html>
 <script src="~/Scripts/_Layout.js"></script>
