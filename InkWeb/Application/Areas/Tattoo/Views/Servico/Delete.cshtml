@@ -1,0 +1,88 @@
+﻿@model Models.Tattoo.MServico
+
+@{
+    ViewBag.Title = "Excluir pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <h3>Excluir pedido</h3>
+    <section class="info_Pedido">
+        <h4>Informações do pedido</h4>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Tamanho_Tattoo): </p>
+            <p> @Html.DisplayFor(model => model.Tamanho_Tattoo)</p>
+        </div>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Local_Corpo):</p>
+            <p>@Html.DisplayFor(model => model.Local_Corpo)</p>
+        </div>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Data_servico):</p>
+            <p>@Html.DisplayFor(model => model.Data_servico)</p>
+        </div>
+        <div>
+            <p>@Html.DisplayNameFor(model => model.Forma_Pagamento):</p>
+            <p>@Html.DisplayFor(model => model.Forma_Pagamento)</p>
+        </div>
+    </section>
+    <section class="descricao">
+        <div>
+            <h4>@Html.DisplayNameFor(model => model.Descricao)</h4>
+            <div>
+                <p>@Html.DisplayFor(model => model.Descricao)</p>
+            </div>
+        </div>
+
+
+        <p>@Html.DisplayNameFor(model => model.Image_Perfil)</p>
+
+        <p>@Html.DisplayFor(model => model.Image_Perfil)</p>
+
+
+    </section>
+    <section class="buttons">
+        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#deleteConfirmationModal">Excluir</a>
+        @Html.ActionLink("Confirmar", "PedidosPendentes")
+    </section>
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        Confirmação de exclusão de PRODUTO
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Você está prestes a remover o produto @Model.ID do cadastro.
+                    </p>
+                    <p>
+                        <strong>
+                            Você está certo que deseja prosseguir?
+                        </strong>
+                    </p>
+                    @using (Html.BeginForm("Delete", "Cliente", FormMethod.Post, new { @id = "delete-form", role = "form" }))
+                    {
+                        @Html.HiddenFor(m => m.ID)
+                        @Html.AntiForgeryToken()
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="$('#delete-form').submit();">
+                        Sim, exclua este produto.
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        Não, não exclua este produto.
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+@section style{
+    <link href="~/Styles/Cliente/Teste.css" rel="stylesheet" type="text/css" /> }

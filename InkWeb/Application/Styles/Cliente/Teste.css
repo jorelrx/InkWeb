@@ -1,0 +1,60 @@
+﻿main {
+    width: 30em;
+    margin: 4em auto;
+    background-color: white;
+    text-align: center
+}
+
+    main h3 {
+        background-color: #141414;
+        padding: 1em;
+    }
+
+    main h4, main p {
+        color: black;
+    }
+
+    main section{
+        text-align: center;
+    }
+
+        main section h4 {
+            font-weight: 600;
+            font-size: 1.3em;
+            line-height: 2em;
+        }
+
+    main .info_Pedido div {
+        display: flex;
+        justify-content: center;
+        padding: 0.3em;
+    }
+
+            main section div p {
+                margin-right: 0.5em;
+                font-family: system-ui;
+            }
+
+    main .descricao div div {
+        width: 25em;
+        margin: 0 auto;
+        min-height: 15em;
+        border: 1px solid #D2D2D2;
+        text-align: left;
+        padding: 1em;
+        border-radius: 2em;
+    }
+
+    main .buttons
+    {
+        padding: 1em 3em;
+        display: flex;
+        justify-content: space-between
+    }
+
+        main .buttons a {
+            background-color: #141414;
+            text-decoration: none;
+            padding: 0.3em 0.6em;
+            border-radius: 1em;
+        }
