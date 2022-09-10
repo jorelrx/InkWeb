@@ -1,0 +1,9 @@
+﻿@using Application.DTOs
+@model TattooDTO
+
+
+<div class="form-group">
+    <label asp-for="@Model.Description" class="control-label"></label>
+    <input asp-for="SizeTattoo" class="form-control" />
+    <span asp-validation-for="SizeTattoo" class="text-danger"></span>
+</div>
